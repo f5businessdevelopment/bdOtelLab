@@ -8,6 +8,6 @@ This self-guided lab is intended to provide a hands-on introduction to Open Tele
 ---
 **Go to [Lab Overview](docs/overview.md)**
 
-**Go to [LabA - Application Instrumentation & Tracing](docs/labA.md)**
+**Go to [Exercise 1 - Application Instrumentation & Tracing](docs/ex2.md)**
 
-**Go to [LabB - Exporting BIG-IP metrics using the OTel consumer](docs/labB.md)**
+**Go to [Exercise 2- Exporting BIG-IP metrics using the OTel consumer](docs/ex2.md)**
