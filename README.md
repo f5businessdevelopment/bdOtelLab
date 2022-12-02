@@ -26,5 +26,5 @@ As illustrated above, the lab environment consists of the following:
 
    >**Prometheus** providing visibility for BIG-IP metrics
 ---
-####Go to [LabA - Application Instrumentation & Tracing](labA.md)
-####Go to [LabB - Exporting BIG-IP metrics using the OTel consumer](labB.md)
+###Go to [LabA - Application Instrumentation & Tracing](labA.md)
+###Go to [LabB - Exporting BIG-IP metrics using the OTel consumer](labB.md)
