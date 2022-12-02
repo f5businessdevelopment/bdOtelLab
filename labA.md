@@ -1,8 +1,3 @@
----
-title: LabA - Application Instrumentation & Tracing
-layout: template
-filename: labA.md
---- 
 
 ---
 **Go to [Overview](readme.md)**

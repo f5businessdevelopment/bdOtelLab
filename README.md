@@ -1,9 +1,3 @@
----
-title: Overview
-layout: template
-filename: readme.md
---- 
-
 F5 BD OTel Introductory Lab
 ============================================================================
 
