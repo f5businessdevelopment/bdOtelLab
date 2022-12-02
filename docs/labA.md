@@ -1,4 +1,7 @@
 
+LabA - Application instrumentation sample walk-through and troubleshooting
+============================================================================
+
 ---
 **Go to [Overview](overview.md)**
 
