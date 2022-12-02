@@ -6,7 +6,7 @@ This self-guided lab is intended to provide a hands-on introduction to Open Tele
 
  >Configure telemetry streaming of metrics from F5 BIG-IP utilizing the OTel collector gateway 
 
-<img src="images/labenv.png" alt="Flowers">
+<img src="../images/labenv.png" alt="Flowers">
 
 
 As illustrated above, the lab environment consists of the following:
