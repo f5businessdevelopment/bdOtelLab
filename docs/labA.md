@@ -1,5 +1,7 @@
 
 ---
-**Go to [Overview](docs/overview.md)**
+**Go to [Overview](overview.md)**
 
-**Go to [LabB - Exporting BIG-IP metrics using the OTel consumer](labA.md)**
+**Go to [LabB - Exporting BIG-IP metrics using the OTel consumer](labB.md)**
+
+**[Home](https://github.com/f5businessdevelopment/bdOtelLab)**
