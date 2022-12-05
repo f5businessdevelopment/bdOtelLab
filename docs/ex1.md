@@ -86,8 +86,20 @@ The screenshot below illustrates how the above manually created instrumentation 
 
 ---
 ### Troubleshooting - *"Sorry...something must be misconfigured"*
+Now that you are equipped with a very limited understanding of how the sample application is instrumented for Open Telemetry, you can start the application.
+
+From the VS Code UI, open a new terminal window via the top menu bar.  From the terminal window start the application by entering the commands:
+
+```cd theLabApp```
+```python3 labapp.py```
+
+The application will start and the exposed endpoint will be presented as shown below.
+
 
 <img src= "../images/Picture11.png" width="650">
+
+To test the application, you can select and open the link provided in the terminal window as illustrated above or you can navigate to Google Chrome located on the desktop.  With Chrome opened, open a new tab and navigate to application's published endpoint at http://10.1.1.6:8080.
+
 <img src="../images/Picture12.png">
 
 #### Troubleshoot Redis connectivity
