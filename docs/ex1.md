@@ -91,6 +91,7 @@ Now that you are equipped with a very limited understanding of how the sample ap
 From the VS Code UI, open a new terminal window via the top menu bar.  From the terminal window start the application by entering the commands:
 
 ```cd theLabApp```
+
 ```python3 labapp.py```
 
 The application will start and the exposed endpoint will be presented as shown below.
