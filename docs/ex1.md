@@ -87,7 +87,7 @@ The screenshot below illustrates how the above manually created instrumentation 
 ---
 ### Troubleshooting - *"Sorry...something must be misconfigured"*
 
-<img src= "../images/Picture11.png">
+<img src= "../images/Picture11.png" width="650">
 <img src="../images/Picture12.png">
 
 #### Troubleshoot Redis connectivity
