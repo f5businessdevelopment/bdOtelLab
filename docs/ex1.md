@@ -25,19 +25,21 @@ In addition, the sample application has been instrumented using the Open Telemet
 A trace is a collection of operations that represents a unique transaction handled by an application and its services. A span represents a single operation within a trace.  
 
 The image below, (*courtesy of [Splunk](https://docs.splunk.com/Observability/apm/apm-spans-traces/traces-spans.html#:~:text=What%20are%20traces%20and%20spans,single%20operation%20within%20a%20trace.)*) shows a trace represented by a series of multicolored bars labeled with the letters A, B, C, D, and E. Each lettered bar represents a single span. The spans are organized to visually represent a hierarchical relationship in which span A is the parent span and the subsequent spans are its children.
+
 <img src="../images/span.png" width="500">
+
 A span might refer to another span as its parent, indicating a relationship between operations involved in the trace. In the image above, span A is a parent span, and span B is a child span. 
 
 This relationship could indicate that, for example, span A makes a service call that triggers the operation captured by span B. In this image, span C is also a child of span B, and so on.
 
 ### Review the sample app
 <img src="../images/Picture4.png">
-<img src="../images/Picture5.png">
-<img src="../images/Picture6.png">
+<img src="../images/Picture5.png" width="500">
+<img src="../images/Picture6.png" width="675">
 <img src="../images/Picture7.png">
-<img src="../images/Picture8.png">
-<img src="../images/Picture9.png">
-<img src="../images/Picture10.png">
+<img src="../images/Picture8.png" width="500">
+<img src="../images/Picture9.png" width="750">
+<img src="../images/Picture10.png" width="750">
 ###*"Sorry...something must be misconfigured"* - Application troubleshooting
 <img src= "../images/Picture11.png">
 <img src="../images/Picture12.png">
