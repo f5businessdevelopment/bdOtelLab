@@ -27,36 +27,55 @@ A span might refer to another span as its parent, indicating a relationship betw
 
 This relationship could indicate that, for example, span A makes a service call that triggers the operation captured by span B. In this image, span C is also a child of span B, and so on.
 
-### Review the sample app
+### Review the sample application
 
-==**Note:** Although a basic understanding of Python may be helpful, this lab does not require previous coding experience.==
+==***Note:** Although a basic understanding of Python may be helpful, this lab assumes no previous coding experience*.==
 
-Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see below).  You will be using VS Code to review and edit the application file.
+Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see below).  You will be using VS Code to review and edit the application file.  VS Code will be prompt you for user credentials as it creates a remote session with the application server, (theWorks).
 
 <img src="../images/Picture3.png" width="600">
 
-The application does the following:
-1. Creates a local web site exposing port 8080,
-2. Connects to and populates Redis DB container with several new site URLs,
-3. Randomly selects and retrieves a URL record from the Redis DB; and
-4. Redirects site visitors to the selected URL.
+With VS Code open, use the navigation pane on the left and open the application file, (theLabApp/labapp.py).  When ran, the application will:
 
+1. Connects to and populates Redis DB container with several new site URLs
+1. Randomly selects and retrieves a URL record from the Redis DB
+1. Redirects site visitors to the selected URL
+1. Creates a local web site located at http://10.1.10.6:8080
 
+With the file open in the viewer, locate and review the various OTel relevant snippets.  
 
 <img src="../images/Picture4.png">
+
+#### OTel SDK module import
+Import statements are used to refer to an utilize previously created python modules.  The Open Telemetry SDK includes several submodules which can be imported, (*see below*) depending upon the libraries utilized, services requiring instrumentation, and exporter(s) required.
+
+This application has imports to handle automatic instrumenting of Flask and Request, (*web services*) as well as Redis.  In addition, there are import statements for processors and OTel exporters.
+
 <img src="../images/Picture5.png" width="500">
+
+#### Trace provider
+
 <img src="../images/Picture6.png" width="675">
+
+#### OTel exporters
 <img src="../images/Picture7.png">
+
+#### Automatic instrumentation
 <img src="../images/Picture8.png" width="500">
+
+#### Manual instrumentation
 <img src="../images/Picture9.png" width="750">
 <img src="../images/Picture10.png" width="750">
-###*"Sorry...something must be misconfigured"* - Application troubleshooting
+
+### *"Sorry...something must be misconfigured"* - Application troubleshooting
 <img src= "../images/Picture11.png">
 <img src="../images/Picture12.png">
-####Troubleshoot Redis connectivity
+
+#### Troubleshoot Redis connectivity
 <img src="../images/Picture13.png">
 <img src="../images/Picture14.png">
-####Troubleshoot application
+
+#### Troubleshoot application
 <img src="../images/Picture15.png">
 <img src="../images/Picture16.png">
 <img src="../images/Picture17.png">
