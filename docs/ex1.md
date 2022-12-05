@@ -29,7 +29,7 @@ This relationship could indicate that, for example, span A makes a service call 
 
 ### Review the sample application
 
-==***Note:** Although a basic understanding of Python may be helpful, this lab assumes no previous coding experience*.==
+***Note:** Although a basic understanding of Python may be helpful, this lab assumes no previous coding experience*.
 
 Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see below).  You will be using VS Code to review and edit the application file.  VS Code will be prompt you for user credentials as it creates a remote session with the application server, (theWorks).
 
