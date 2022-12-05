@@ -30,7 +30,7 @@ A span might refer to another span as its parent, indicating a relationship betw
 
 This relationship could indicate that, for example, span A makes a service call that triggers the operation captured by span B. In this image, span C is also a child of span B, and so on.
 
-###Review the sample app
+### Review the sample app
 <img src="../images/Picture4.png">
 <img src="../images/Picture5.png">
 <img src="../images/Picture6.png">
