@@ -88,7 +88,7 @@ The screenshot below illustrates how the above manually created instrumentation 
 ### Troubleshooting - *"Sorry...something must be misconfigured"*
 Now that you are equipped with a very limited understanding of how the sample application is instrumented for Open Telemetry, you can start the application.
 
-From the VS Code UI, open a new terminal window via the top menu bar.  From the terminal window start the application by entering the commands:
+From the VS Code UI, open a new terminal window via the top menu bar.  From the terminal window start the application by entering the following commands:
 
 ```cd theLabApp```
 
