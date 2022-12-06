@@ -74,9 +74,7 @@ Many Python modules support automatic instrumentation.  For example, the sample 
 <img src="../images/Picture8.png" width="650">
 
 ##### Manual instrumentation
-You will add in manual instrumentation when either automatic instrumentation is not available  or if you have a desire to configure your own tracing spans.  In the code snippet below, a new span will be generated on line 92.
-
-In addition, metadata such as custom attributes and status codes can be generated.
+You will add in manual instrumentation when either automatic instrumentation is not available  or if you have a desire to configure your own tracing spans.  In the code snippet below, a new span will be generated on line 92.  Additionally, metadata such as custom attributes and status codes can be generated.
 
 <img src="../images/Picture9.png" width="750">
 
