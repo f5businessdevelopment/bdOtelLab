@@ -102,7 +102,7 @@ To test the application, you can select and open the link provided in the termin
 
 As you can see above, there is an issue(s) with the application.  If the application was running as intended, the browser session would have been automatically redirected to a random news site.  
 
-For the remainder of this exercise, you will use Jaeger to identify an investigate any errors.  You will then modify the application code to correct the identified errors.
+For the remainder of this exercise, you will use Jaeger to identify and investigate any errors.  You will then update the application code to correct the identified errors.
 
 #### Troubleshoot Redis connectivity
 
@@ -110,7 +110,7 @@ If not currently opened, open Google Chrome from the desktop and select the  Jae
 
 Select the '*Otel_Lab*' service from the 'Service' drop-down and click on 'Find Traces'.  If that is not an available option, refresh the web page and try again.  You should see output similar to the below example.  
 
-You will likely note multiple errors.  To start with, you will address the errors associate with the **Redis Connectivity** traces.  Review the trace/span entries in Jaeger along with the application file, (*labapp.py*) to identify the issue related to connecting to Redis.
+You will likely note multiple errors.  To begin with, address the errors associated with the **Redis Connectivity** traces.  Review the trace/span entries in Jaeger along with the application file, (*labapp.py*) to identify the issue related to connecting to Redis.
 
 <img src="../images/Picture13.png">
 
