@@ -47,7 +47,7 @@ With the file open in the viewer, locate and review the various OTel relevant sn
 <img src="../images/Picture4.png" width="600">
 
 #### OTel SDK module import
-Import statements are used to refer to an utilize previously created python modules.  The OpenTelemetry SDK includes several submodules which can be imported, (*see below*) depending upon the libraries utilized, services requiring instrumentation, and exporter(s) required.
+Import statements are used to reference and utilize previously created python modules.  The OpenTelemetry SDK includes several submodules which can be imported, (*see below*) depending upon the libraries utilized, services requiring instrumentation, and exporter(s) required.
 
 This application has imports to handle automatic instrumenting of Flask and Request, (*web services*) as well as Redis.  In addition, there are import statements for processors and OTel exporters.
 
