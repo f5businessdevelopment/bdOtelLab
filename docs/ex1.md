@@ -140,8 +140,8 @@ This concludes Exercise 1.
 
 ---
 
-**Go to [Overview](overview.md)**
-
 **Go to [Exercise 2 - Exporting BIG-IP metrics using the OTel consumer](ex2.md)**
+
+**Go to [Overview](overview.md)**
 
 **Go [Home](https://github.com/f5businessdevelopment/bdOtelLab)**

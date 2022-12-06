@@ -21,8 +21,10 @@ From the VS Code UI use the navigation pane on the left and open the OTel collec
 <img src="../images/Picture24.png">
 <img src="../images/Picture25.png">
 ---
-**Go to [Overview](overview.md)**
+
+**Go [Home](https://github.com/f5businessdevelopment/bdOtelLab)**
 
 **Go to [Exercise 1 - App instrumentation walk-through and troubleshooting](ex1.md)**
 
-**Go [Home](https://github.com/f5businessdevelopment/bdOtelLab)**
+**Go to [Overview](overview.md)**
+
