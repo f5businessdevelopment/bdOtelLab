@@ -4,7 +4,7 @@ Exercise 2 - Exporting BIG-IP metrics using the OTel consumer
 
 During this exercise, you will configure a BIG-IP virtual edition, (using AS3 and Telemetry Streaming) to send metrics to a locally installed Prometheus instance by way of an OpenTelemetry collector.
 
-The OpenTelemetry Collector service provides a vendor-agnostic proxy to receive, process and export telemetry data. It removes the need to run, operate, and maintain multiple agents/collectors. The collector supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends.
+The OpenTelemetry Collector service provides a vendor-agnostic proxy to receive, process and export observability data.  The collector supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends.
 
 The OTel collector is managed via a user-readable YAML configuration file.  At a minimum, the configuration must include the following three sections:
 - **Receivers** - section with information related to how the collector will receive observability data, (i.e. protocols, endpoint addresses, ports) 
