@@ -3,7 +3,7 @@ Exercise 1 - App instrumentation walk-through and troubleshooting
 ============================================================================
 ### Deploy blueprint and connect to jumpbox
 
-From the [UDF](https://udf.f5.com/blueprints) console, search for and deploy the blueprint entitled *Open Telemetry Introductory*. 
+From the [UDF](https://udf.f5.com/blueprints) console, search for and deploy the blueprint entitled *OpenTelemetry Introductory*. 
 Once the blueprint has finished deploying, access the Windows jump box by selecting the RDP access link, (*see below*).  The jump box will be used to complete all lab exercises.  Credentials for this lab can be viewed by accessing the system(s) **DETAILS** tab.
 
 <img src="../images/Picture1.png" width="750">
@@ -14,7 +14,7 @@ Upon successful login to the jump box, you will arrive at the Windows server des
 
 ### Review sample application instrumentation
 
-For a system to be observable, it must be instrumented. The code needs to emit traces, metrics, and/or logs.  To accomplish this, the [Open Telemetry](https://opentelemetry.io/) project includes SDKs for a majority of modern programming languages.  For this exercise, a sample application, (***labapp.py***) has been instrumented, using the Open Telemetry Python SDK, to send trace data to a locally running [Jaeger](https://www.jaegertracing.io/) instance.
+For a system to be observable, it must be instrumented. The code needs to emit traces, metrics, and/or logs.  To accomplish this, the [OpenTelemetry](https://opentelemetry.io/) project includes SDKs for a majority of modern programming languages.  For this exercise, a sample application, (***labapp.py***) has been instrumented, using the OpenTelemetry Python SDK, to send trace data to a locally running [Jaeger](https://www.jaegertracing.io/) instance.
 
 #### Traces and Spans
 A trace is a collection of operations that represents a unique transaction handled by an application and its services. A span represents a single operation within a trace.  
@@ -47,7 +47,7 @@ With the file open in the viewer, locate and review the various OTel relevant sn
 <img src="../images/Picture4.png">
 
 #### OTel SDK module import
-Import statements are used to refer to an utilize previously created python modules.  The Open Telemetry SDK includes several submodules which can be imported, (*see below*) depending upon the libraries utilized, services requiring instrumentation, and exporter(s) required.
+Import statements are used to refer to an utilize previously created python modules.  The OpenTelemetry SDK includes several submodules which can be imported, (*see below*) depending upon the libraries utilized, services requiring instrumentation, and exporter(s) required.
 
 This application has imports to handle automatic instrumenting of Flask and Request, (*web services*) as well as Redis.  In addition, there are import statements for processors and OTel exporters.
 
@@ -66,7 +66,7 @@ Many observability providers have developed custom exporters allowing for direct
 <img src="../images/Picture7.png" width="650">
 
 #### Instrumentation
-With the above OTel SDK sections defined in the code, the desired application libraries, calls and functions can be instrumented.  The Open Telemetry SDK supports both automatic instrumentation as well as manual instrumentation.
+With the above OTel SDK sections defined in the code, the desired application libraries, calls and functions can be instrumented.  The OpenTelemetry SDK supports both automatic instrumentation as well as manual instrumentation.
 
 ##### Automatic instrumentation
 Many Python modules support automatic instrumentation.  For example, the sample application code makes use of the Redis module/library to connect to and update a Redis database.  By simply including the snippet shown below, relevant tracing data is automatically generated for Redis interactions.
@@ -84,7 +84,7 @@ The screenshot below illustrates how the above manually created instrumentation 
 
 ---
 ### Troubleshooting - *"Sorry...something must be misconfigured"*
-Now that you are equipped with a very limited understanding of how the sample application is instrumented for Open Telemetry, you can start the application.
+Now that you are equipped with a very limited understanding of how the sample application is instrumented for OpenTelemetry, you can start the application.
 
 From the VS Code UI, open a new terminal window via the top menu bar.  From the terminal window start the application by entering the following commands:
 
