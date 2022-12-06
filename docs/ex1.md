@@ -38,13 +38,13 @@ Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see belo
 With VS Code open, use the navigation pane on the left and open the application file, (theLabApp/labapp.py).  When ran, the application will:
 
 1. Create a local web site located at http://10.1.10.6:8080
-1. Connect to and populate a Redis DB container with several key/value pairs
+1. Connect to and populate a Redis database container with several key/value pairs
 1. Randomly select and retrieve a URL record from the Redis DB
 1. Redirect the site visitor to the selected URL
 
 With the file open in the viewer, locate and review the various OTel relevant snippets.  
 
-<img src="../images/Picture4.png">
+<img src="../images/Picture4.png" width="600">
 
 #### OTel SDK module import
 Import statements are used to refer to an utilize previously created python modules.  The OpenTelemetry SDK includes several submodules which can be imported, (*see below*) depending upon the libraries utilized, services requiring instrumentation, and exporter(s) required.
