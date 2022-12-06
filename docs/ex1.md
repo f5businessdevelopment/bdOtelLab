@@ -94,8 +94,7 @@ From the VS Code UI, open a new terminal window via the top menu bar.  From the 
 
 ```python3 labapp.py```
 
-The application will start and the exposed endpoint will be presented as shown below.
-
+The application will start and the exposed endpoint will be presented as shown below.  Any additional code changes will trigger an automatic application restart.
 
 <img src= "../images/Picture11.png" width="650">
 
@@ -103,14 +102,43 @@ To test the application, you can select and open the link provided in the termin
 
 <img src="../images/Picture12.png">
 
+As you can see above, there is an issue(s) with the application.  If the application was running as intended, the browser session would have been automatically redirected to a random news site.  
+
+For the remainder of this exercise, you will use Jaeger to identify an investigate any errors.  You will then modify the application code to correct the identified errors.
+
 #### Troubleshoot Redis connectivity
+
+If not currently opened, open Google Chrome from the desktop and select the  Jaeger UI tab.  If the Jaeger tab is no longer visible, the console is located at http://10.1.1.6:16686.
+
+Select the '*Otel_Lab*' service from the 'Service' drop-down and click on 'Find Traces'.  If that is not an available option, refresh the web page and try again.  You should see output similar to the below example.  
+
+You will likely note multiple errors.  To start with, you will address the errors associate with the **Redis Connectivity** traces.  Review the trace/span entries in Jaeger along with the application file, (*labapp.py*) to identify the issue related to connecting to Redis.
+
 <img src="../images/Picture13.png">
+
+Update the application file in VS Code to correct the issue and save your changes.  Upon saving, the application will automatically restart.  Test your application changes by navigating to the application endpoint at http://10.1.10.6:8080.  
+
+Once you have tried the application, (*yes, it will still fail*), return to the Jaeger UI and search for the latest traces. If you have successfully corrected the issue you should see a similar output to the below example.  While there are still errors reporting, you should see a successful **Redis Connectivity** trace entry.
+
 <img src="../images/Picture14.png">
 
 #### Troubleshoot application
+
+With the database connectivity issue resolved, you will note errors are still being recorded, (*see below*).
+
 <img src="../images/Picture15.png">
+
+Review the trace/span entries to identify possible causes of the application issue.  Be sure to drill down, (*example below*) into spans to help identify the root cause(s).
+
 <img src="../images/Picture16.png">
+
+As with the previous issue, update the application file in VS Code to correct the issue and save your changes.  Upon saving, the application will automatically restart.  Test your application changes by navigating to the application endpoint at http://10.1.10.6:8080.
+
+If your corrections are successful, the browser session should be redirected to a random news site.  To verify all issues have been addressed, review the latest trace information in Jaeger.  If all issues have been remediated, you should see results similar to the below example.
+
 <img src="../images/Picture17.png">
+
+This concludes Exercise 1.
 
 ---
 
