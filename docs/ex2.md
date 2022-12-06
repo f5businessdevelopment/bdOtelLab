@@ -4,22 +4,73 @@ Exercise 2 - Exporting BIG-IP metrics using the OTel consumer
 
 During this exercise, you will configure a BIG-IP virtual edition, (using AS3 and Telemetry Streaming) to send metrics to a locally installed Prometheus instance by way of an OpenTelemetry collector.
 
-The OpenTelemetry Collector offers a vendor-agnostic implementation of how to receive, process and export telemetry data. It removes the need to run, operate, and maintain multiple agents/collectors. This works with improved scalability and supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends. The local Collector agent is the default location to which instrumentation libraries export their telemetry data.
+The OpenTelemetry Collector service provides a vendor-agnostic proxy to receive, process and export telemetry data. It removes the need to run, operate, and maintain multiple agents/collectors. The collector supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends.
 
+The OTel collector is managed via a user-readable YAML configuration file.  At a minimum, the configuration must include the following three sections:
+- **Receivers** - section with information related to how the collector will receive observability data, (i.e. protocols, endpoint addresses, ports) 
 
+- **Processors** - section with configuration information related to data manipulation and insertion.  In this section, one can add/delete/modify data streams using filters.
+
+- **Exporters** - section including information related push or pull based backends/destinations
 
 #### Review OTel Collector configuration
 
-From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).
+From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).  Familiarize yourself with the configuration file contents.  The collector configuration file, (*example below*)  has been configured to:
+ - Receive telemetry via OTLP over either HTTP or gRPC
+ - Process records using the standard batch processor
+ - Export traces to a Jaeger backend and metrics to a Prometheus backend
 
 <img src= "../images/Picture18.png">
+
+Once you have familiarized yourself with the OTel collector configuration, use Google Chrome to navigate the lab BIG-IP UI.  Login using the credentials available on the UDF details tab.  Review the current BIG-IP configuration.
+
 <img src="../images/Picture19.png">
+
+#### Configure the BIG-IP for telemetry streaming
+
+You will now configure the lab BIG-IP with the necessary resources to send metrics to the OTel collector receiver endpoint.  This can be easily accomplished by applying Applications Services 3 extension (AS3) and Telemetry Streaming (TS) declarations.
+
+Navigate to and open the Postman application from the Windows desktop.  Postman has been pre-populated with the two required declarations ready to be POSTed.  
+
+##### AS3 declaration
+
+Review the provided AS3 declaration.  The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. POST the provided declaration.
+
 <img src="../images/Picture20.png">
+
+##### TS declaration
+
+Review the provided TS declaration.  The declaration configures the telemetry streaming service to push events to an OTel collector.  The OTel collector consumer is limited to delivering metrics.  The consumer is configured to use the OTLP protocol over gRPC with the standard port of 4317.  POST the provided declaration.
+
 <img src="../images/Picture21.png">
-<img src="../images/Picture22.png">
-<img src="../images/Picture23.png">
+
+#### Verify data delivery
+
+The BIG-IP is now configured to send telemetry.  If not currently opened, open Google Chrome from the desktop and select the  Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.1.6:9090.
+
 <img src="../images/Picture24.png">
+
+To perform a quick test on the system, select the *Graph* tab and enter 'memory' in the search bar; click on 'Execute'.  The system will query metrics for the BIG-IP system memory metric and return a relevant time chart, (*see below*).
+
+**Note:** *It may take several minutes for the metrics to appear in Prometheus.* 
+
 <img src="../images/Picture25.png">
+
+To verify metrics are being sent by the BIG-IP, navigate out of the RDP jumpbox and access the BIG-IP's web shell from the UDF console, (*see below*).
+
+<img src="../images/Picture22.png">
+
+
+From the BIG-IP command line, view the *restnoded.log* file.
+
+```tail -f /var/log/restnoded/restnoded.log```
+
+By tailing the *restnoded.log* file you can view rest API events on the BIG-IP as the occur.  As the below example shows, the log periodically records the system poller as it gathers metrics from the various BIG-IP collection endpoints.  In addition any TS connectivity issues or other configuration issues will be recorded here.  
+
+<img src="../images/Picture23.png">
+
+This concludes Exercise 2.
+
 ---
 
 **Go [Home](https://github.com/f5businessdevelopment/bdOtelLab)**
