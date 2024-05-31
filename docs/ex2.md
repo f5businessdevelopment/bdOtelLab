@@ -30,13 +30,15 @@ Once you have familiarized yourself with the OTel collector configuration, use G
 
 You will now configure the lab BIG-IP with the necessary resources to send metrics to the OTel collector receiver endpoint.  This can be easily accomplished by applying Applications Services 3 extension (AS3) and Telemetry Streaming (TS) declarations.
 
-Navigate to and open the Postman application from the Windows desktop.  Postman has been pre-populated with the two required declarations ready to be POSTed.  
+From the Chrome browser menu bar select the '*Postman*' extension, (see below).  Postman has been pre-populated with the two required declarations ready to be POSTed.  From the left navigation frame, select '*Collections*' and '*BIG-IP Telemetry Streaming*' to access the prepopulated declarations.
+
+<img src="../images/Picture20.png">
 
 ##### AS3 declaration
 
 Review the provided AS3 declaration.  The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. POST the provided declaration.
 
-<img src="../images/Picture20.png">
+
 
 ##### TS declaration
 
