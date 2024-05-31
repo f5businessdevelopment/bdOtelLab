@@ -19,6 +19,8 @@ As illustrated above, the lab environment consists of the following:
    >**Jaeger** providing visibility for application tracing
 
    >**Prometheus** providing visibility for BIG-IP metrics
+
+   >**F5 BIG-IP Next** providing L4/L7 ADC Services and utilizing Open Telemetry to stream telemetry data to an OTel collector gateway
 ---
 **Go to [Exercise 1 - App instrumentation walk-through and troubleshooting](ex1.md)**
 
