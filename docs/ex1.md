@@ -60,11 +60,9 @@ The provider section, (*see below*) defines the source of traces that are genera
 <img src="../images/Picture6.png">
 
 #### OTel exporters
-The sample application has been configured with two (2) exporters. Exporters define where the application should direct (*export*) observability data.
+The sample application has been configured with a batch OTLP span exporter. Exporters define where the application should direct (*export*) observability data. Many observability providers have developed custom exporters allowing for direct ingestion of traces, metrics, and/or logs.  
 
-Many observability providers have developed custom exporters allowing for direct ingestion of traces, metrics, and/or logs.  In the snippet below, a customer Jaeger exporter has been defined as well as a generic OTLP span exporter.
-
-<img src="../images/Picture7.png" width="650">
+<img src="../images/Picture7.png" width="450">
 
 #### Instrumentation
 With the above OTel SDK sections defined in the code, the desired application libraries, calls and functions can be instrumented.  The OpenTelemetry SDK supports both automatic instrumentation as well as manual instrumentation.
