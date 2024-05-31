@@ -18,7 +18,8 @@ The OTel collector is managed via a user-readable YAML configuration file.  At a
 From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).  Familiarize yourself with the configuration file contents.  The collector configuration file, (*example below*)  has been configured to:
  - Receive telemetry via OTLP over either HTTP or gRPC
  - Process records using the standard batch processor
- - Export traces to a Jaeger backend and metrics to a Prometheus backend
+ - Export metrics to a Prometheus backend
+ - Export logs to to a Splunk Enterprise instance *-for Exercise 3*
 
 <img src= "../images/Picture18.png">
 
@@ -52,7 +53,7 @@ The BIG-IP is now configured to send telemetry.  If not currently opened, open G
 
 <img src="../images/Picture24.png">
 
-To perform a quick test on the system, select the *Graph* tab and enter 'f5-system_memory' in the search bar; click on 'Execute'.  
+To perform a quick test on the system, select the *Graph* tab and enter 'f5_system_memory' in the search bar; click on 'Execute'.  
 
 The system will query metrics for the BIG-IP system memory metric and return a relevant time chart, (*see below*).
 
