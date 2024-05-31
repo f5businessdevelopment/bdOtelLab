@@ -87,7 +87,7 @@ The screenshot below illustrates how the above manually created instrumentation 
 ### Troubleshooting - *"Sorry...something must be misconfigured"*
 Now that you are equipped with a very limited understanding of how the sample application is instrumented for OpenTelemetry, you can start the application.
 
-From the VS Code UI, open a new terminal window via the top menu bar.  From the terminal window start the application by entering the following commands:
+From the VS Code UI, switch to the terminal window via the lower tab bar.  From the terminal window start the application by entering the following commands:
 
 ```cd theLabApp```
 
@@ -137,7 +137,7 @@ If your corrections are successful, the browser session should be redirected to 
 
 <img src="../images/Picture17.png">
 
-This concludes Exercise 1.
+This concludes Exercise 1.  Be sure to leave your application running for use in the next lab.
 
 ---
 
