@@ -77,9 +77,9 @@ This concludes Exercise 2.
 
 ---
 
-**Go [Home](https://github.com/f5businessdevelopment/bdOtelLab)**
-
-**Go to [Exercise 1 - App instrumentation walk-through and troubleshooting](ex1.md)**
+**Go to [Exercise 3 - Exporting BIG-IP metrics using the OTel consumer](ex3.md)**
 
 **Go to [Overview](overview.md)**
+
+**Go [Home](https://github.com/f5businessdevelopment/bdOtelLab)**
 
