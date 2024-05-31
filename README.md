@@ -1,7 +1,7 @@
 F5 BD OTel Introductory Lab
 ============================================================================
 
-<img src="images/labenv.png" alt="Where's my Image!">
+<img src="images/labenviron.png" alt="Where's my Image!">
 
 This self-guided lab is intended to provide a hands-on introduction to Open Telemetry (OTel) concepts and their implementation.  During this lab, users will deploy and use a lab infrastructure as shown above.
 
