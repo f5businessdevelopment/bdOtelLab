@@ -32,7 +32,7 @@ You will now configure the lab BIG-IP with the necessary resources to send metri
 
 ##### AS3 declaration
 
-Review the provided AS3 declaration. The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. From the VS Code UI use the following curl command to post the declaration.
+Review the provided AS3 declaration. The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. From the VS Code UI open a new terminal tab and use the following curl command to post the declaration.
 
 *curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/appsvcs/declare" -H "Content-Type:application/json" -d @./ts_declaration.json*
 
