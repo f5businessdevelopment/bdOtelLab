@@ -28,21 +28,21 @@ Once you have familiarized yourself with the OTel collector configuration, use G
 
 #### Configure the BIG-IP for telemetry streaming
 
-You will now configure the lab BIG-IP with the necessary resources to send metrics to the OTel collector receiver endpoint.  This can be easily accomplished by applying Applications Services 3 extension (AS3) and Telemetry Streaming (TS) declarations.
-
-From the Chrome browser menu bar select the '*Postman*' extension, (see below).  Postman has been pre-populated with the two required declarations ready to be POSTed.  From the left navigation frame, select '*Collections*' and '*BIG-IP Telemetry Streaming*' to access the prepopulated declarations.
-
-<img src="../images/Picture20.png">
+You will now configure the lab BIG-IP with the necessary resources to send metrics to the OTel collector receiver endpoint.  This can be easily accomplished by applying Applications Services 3 extension (AS3) and Telemetry Streaming (TS) declarations.  You will apply the declarations using curl commands from the VSCode editor.
 
 ##### AS3 declaration
 
-Review the provided AS3 declaration.  The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. POST the provided declaration.
+Review the provided AS3 declaration. The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. From the VS Code UI use the following curl command to post the declaration.
 
+*curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/appsvcs/declare" -H "Content-Type:application/json" -d @./ts_declaration.json*
 
+<img src="../images/Picture20.png">
 
 ##### TS declaration
 
-Review the provided TS declaration.  The declaration configures the telemetry streaming service to push events to an OTel collector.  The OTel collector consumer is limited to delivering metrics.  The consumer is configured to use the OTLP protocol over gRPC with the standard port of 4317.  POST the provided declaration.
+Review the provided TS declaration.  The declaration configures the telemetry streaming service to push events to an OTel collector.  The OTel collector consumer is limited to delivering metrics.  The consumer is configured to use the OTLP protocol over gRPC with the standard port of 4317.  POST the provided declaration with the below command.
+
+*curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/telemetry/declare" -H "Content-Type:application/json" -d @./ts_declaration.json*
 
 <img src="../images/Picture21.png">
 
