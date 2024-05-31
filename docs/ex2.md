@@ -34,7 +34,7 @@ You will now configure the lab BIG-IP with the necessary resources to send metri
 
 Review the provided AS3 declaration. The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. From the VS Code UI open a new terminal tab and use the following curl command to post the declaration.
 
-*curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/appsvcs/declare" -H "Content-Type:application/json" -d @./ts_declaration.json*
+*curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/appsvcs/declare" -H "Content-Type:application/json" -d @./as3_declaration.json*
 
 <img src="../images/Picture20.png">
 
@@ -48,11 +48,11 @@ Review the provided TS declaration.  The declaration configures the telemetry st
 
 #### Verify data delivery
 
-The BIG-IP is now configured to send telemetry.  If not currently opened, open Google Chrome from the desktop and select the  Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.1.6:9090.
+The BIG-IP is now configured to send telemetry.  If not currently opened, open Google Chrome from the desktop and select the  Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.20.4:9090.
 
 <img src="../images/Picture24.png">
 
-To perform a quick test on the system, select the *Graph* tab and enter 'memory' in the search bar; click on 'Execute'.  
+To perform a quick test on the system, select the *Graph* tab and enter 'f5-system_memory' in the search bar; click on 'Execute'.  
 
 The system will query metrics for the BIG-IP system memory metric and return a relevant time chart, (*see below*).
 
