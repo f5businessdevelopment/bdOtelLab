@@ -12,4 +12,4 @@ This self-guided lab is intended to provide a hands-on introduction to Open Tele
 
 **Go to [Exercise 2- Exporting BIG-IP metrics using the OTel consumer](docs/ex2.md)**
 
-**Go to [Exercise 3 - Exporting BIG-IP Next logs using Open Telemetry](ex3.md)**
+**Go to [Exercise 3 - Exporting BIG-IP Next logs using Open Telemetry](docs/ex3.md)**
