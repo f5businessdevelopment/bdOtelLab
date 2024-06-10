@@ -19,7 +19,7 @@ From the VS Code UI use the navigation pane on the left and open the OTel collec
  - Receive telemetry via OTLP over either HTTP or gRPC
  - Process records using the standard batch processor
  - Export metrics to a Prometheus backend
- - Export logs to to a Splunk Enterprise instance *-for Exercise 3*
+ - Export logs to a Splunk Enterprise instance *-for Exercise 3*
 
 <img src= "../images/Picture18.png">
 
