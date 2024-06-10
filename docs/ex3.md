@@ -18,6 +18,11 @@ Take a few minutes to explore the UI.  This BIG-IP Next environment includes, in
 If your example application is still running, you should see the application with a *Good* health, (see below).
 
 <img src="../images/Picture29.png">
+
+*awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' cert-name.pem*
+
+<img src="../images/Picture30.png">
+
 **Go to [Overview](overview.md)**
 
 **Go [Home](https://github.com/f5businessdevelopment/bdOtelLab)**
