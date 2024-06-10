@@ -41,7 +41,7 @@ Review the provided AS3 declaration. The declaration will deploy remote logging 
 
 ##### TS declaration
 
-Review the provided TS declaration.  The declaration configures the telemetry streaming service to push events to an OTel collector.  The OTel collector consumer is limited to delivering metrics.  The consumer is configured to use the OTLP protocol over gRPC with the standard port of 4317.  POST the provided declaration with the below command.
+Review the provided TS declaration.  The declaration configures the telemetry streaming service to push events to an OTel collector.  The OTel collector consumer is limited to delivering metrics.  The consumer is configured to use the OTLP protocol over gRPC with the port of 55681.  POST the provided declaration with the below command.
 
 *curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/telemetry/declare" -H "Content-Type:application/json" -d @./ts_declaration.json*
 
