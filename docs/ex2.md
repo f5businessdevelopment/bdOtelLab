@@ -35,7 +35,7 @@ You will now configure the lab BIG-IP with the necessary resources to send metri
 
 Review the provided AS3 declaration. The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. From the VS Code UI open a new terminal tab and use the following curl command to post the declaration.
 
-*curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/appsvcs/declare" -H "Content-Type:application/json" -d @./as3_declaration.json*
+```curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/appsvcs/declare" -H "Content-Type:application/json" -d @./as3_declaration.json```
 
 <img src="../images/Picture20.png">
 
@@ -43,7 +43,7 @@ Review the provided AS3 declaration. The declaration will deploy remote logging 
 
 Review the provided TS declaration.  The declaration configures the telemetry streaming service to push events to an OTel collector.  The OTel collector consumer is limited to delivering metrics.  The consumer is configured to use the OTLP protocol over gRPC with the port of 55681.  POST the provided declaration with the below command.
 
-*curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/telemetry/declare" -H "Content-Type:application/json" -d @./ts_declaration.json*
+```curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/telemetry/declare" -H "Content-Type:application/json" -d @./ts_declaration.json```
 
 <img src="../images/Picture21.png">
 

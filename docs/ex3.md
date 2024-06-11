@@ -40,11 +40,11 @@ You will need to convert and provide the collector's cert/key and root certifica
 
 Us the VSCode terminal window run the following commands and paste the outputs in the appropriate log consumer fields.
 
+```awk 'NF {sub(/\r/, ""); printf "%s\n",$0;}' config/collector-key.pem```
 
-- awk 'NF {sub(/\r/, ""); printf "%s\n",$0;}' config/collector-key.pem
+```awk 'NF {sub(/\r/, ""); printf "%s\n",$0;}' config/collector.pem``` 
 
-- awk 'NF {sub(/\r/, ""); printf "%s\n",$0;}' config/collector.pem 
-- awk 'NF {sub(/\r/, ""); printf "%s\n",$0;}' config/root-ca.pem 
+```awk 'NF {sub(/\r/, ""); printf "%s\n",$0;}' config/root-ca.pem``` 
 
 With the fields completed, select '*Create*' to generate the log consumer.
 
