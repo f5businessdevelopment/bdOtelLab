@@ -53,7 +53,7 @@ The BIG-IP is now configured to send telemetry.  If not currently opened, open G
 
 <img src="../images/Picture24.png">
 
-To perform a quick test on the system, select the *Graph* tab and enter 'f5_system_memory' in the search bar; click on 'Execute'.  
+To perform a quick test on the system, select the *Graph* tab and enter '**f5_system_memory**' in the search bar; click on 'Execute'.  
 
 The system will query metrics for the BIG-IP system memory metric and return a relevant time chart, (*see below*).
 
