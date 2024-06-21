@@ -69,7 +69,7 @@ This concludes Exercise 2.
 
 ---
 
-**Go to [Exercise 3 - Exporting BIG-IP metrics using the OTel consumer](ex3.md)**
+**Go to [Exercise 3 - Exporting BIG-IP Next metrics using the OTel consumer](ex3.md)**
 
 **Go to [Overview](overview.md)**
 
