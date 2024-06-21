@@ -32,7 +32,7 @@ From the instance details, navigate to '*Log Management*' and select '*Create*'.
 Complete the required fields using the following values below to send logs to the OTel collector.
 - Hostname: **collector.f5demo.net**
 - IP Address: **10.1.20.4**
-- Port: 55681
+- Port: **55681**
 
 You will need to convert and provide the collector's cert/key and root certificate in single-line format, (see below).  
 
