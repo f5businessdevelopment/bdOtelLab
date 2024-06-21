@@ -135,7 +135,7 @@ If your corrections are successful, the browser session should be redirected to 
 
 <img src="../images/Picture17.png">
 
-This concludes Exercise 1.  Be sure to leave your application running for use in the next lab.
+This concludes Exercise 1.  **Be sure to leave your application running for use in the next lab.**
 
 ---
 
