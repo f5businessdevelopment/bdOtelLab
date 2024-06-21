@@ -64,6 +64,7 @@ If successfully configured, you should see results similar to the below example.
 
 <img src="../images/Picture36.png">
 
+**Go to [Exercise 2 - Exporting BIG-IP metrics using the OTel consumer](ex2.md)**
 
 **Go to [Overview](overview.md)**
 
