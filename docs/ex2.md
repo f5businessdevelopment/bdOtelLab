@@ -33,7 +33,7 @@ You will now configure the lab BIG-IP with the necessary resources to send metri
 
 ##### AS3 declaration
 
-Review the provided AS3 declaration. The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. From the VS Code UI open a new terminal tab and use the following curl command to post the declaration.
+The F5 BIG-IP Application Services 3 Extension (referred to as BIG-IP AS3) is a flexible, low-overhead mechanism for managing application-specific configurations on a BIG-IP system. BIG-IP AS3 uses a declarative model, meaning you provide a JSON declaration rather than a set of imperative commands.  Review the provided AS3 declaration. The declaration will deploy remote logging resources, (publishers, virtual, profiles, etc.) required for remote logging capture and transmission. From the VS Code UI open a new terminal tab and use the following curl command to post the declaration.
 
 ```curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/appsvcs/declare" -H "Content-Type:application/json" -d @./as3_declaration.json```
 
@@ -41,7 +41,7 @@ Review the provided AS3 declaration. The declaration will deploy remote logging 
 
 ##### TS declaration
 
-Review the provided TS declaration.  The declaration configures the telemetry streaming service to push events to an OTel collector.  The OTel collector consumer is limited to delivering metrics.  The consumer is configured to use the OTLP protocol over gRPC with the port of 55681.  POST the provided declaration with the below command.
+F5 BIG-IP Telemetry Streaming (BIG-IP TS) enables you to declaratively aggregate, normalize, and forward statistics and events from the BIG-IP to a consumer application.  To use BIG-IP TS, you POST a single JSON declaration to BIG-IP TS’s declarative REST API endpoint.  Review the provided TS declaration.  The declaration configures the telemetry streaming service to push events to an OTel collector.  The OTel collector consumer is limited to delivering metrics.  The consumer is configured to use the OTLP protocol over gRPC with the port of 55681.  POST the provided declaration with the below command.
 
 ```curl -u admin:F5labnet! -k -X POST "https://10.1.1.7/mgmt/shared/telemetry/declare" -H "Content-Type:application/json" -d @./ts_declaration.json```
 
