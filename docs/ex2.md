@@ -47,6 +47,17 @@ F5 BIG-IP Telemetry Streaming (BIG-IP TS) enables you to declaratively aggregate
 
 <img src="../images/Picture21.png">
 
+#### Associate logging profiles with BIG-IP virutual server
+
+Wth the TS declaration posted, the BIG-IP will start to push basic system info metrics to the OTel collector.  Additionally, you well enable AVR and LTM request logging system info is configured.  To do so, you will associate the relevant AS3 logging profiles with the application's virtual server configuration.  
+
+From the BIG-IP UI, select and open the '*theLabApp_vs*'.  Scroll down and switch the configuration option to *Advanced*, (see below).
+
+<img src="../images/Picture37.png">
+
+With the advanced configuration visible, scroll down and select the appropriate **HTTP Analytics**, **TCP Analytics**, and **Request Logging** profiles, (see below).  Select '*Update*' to save the configuration changes.
+
+<img src="../images/Picture38.png">
 #### Verify data delivery
 
 The BIG-IP is now configured to send telemetry.  If not currently opened, open Google Chrome from the desktop and select the  Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.20.4:9090.
