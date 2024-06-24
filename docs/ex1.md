@@ -115,7 +115,7 @@ You will likely note multiple errors.  To begin with, address the errors associa
 
 Update the application file in VS Code to correct the issue and save your changes.  Upon saving, the application will automatically restart.  Test your application changes by navigating to the application endpoint at http://10.1.20.4:8080.  
 
-Once you have tried the application, (*yes, it will still fail*), return to the Jaeger UI and search for the latest traces. If you have successfully corrected the issue you should see a similar output to the below example.  While there are still errors reporting, you should see a successful **Redis Connectivity** trace entry.
+Once you have tried the application, (*yes, it will still fail*), return to the Jaeger UI and search for the latest traces by selecting *'**Find Traces**'*. If you have successfully corrected the issue you should see a similar output to the below example.  While there are still errors reporting, you should see a successful **Redis Connectivity** trace entry.
 
 <img src="../images/Picture14.png">
 
