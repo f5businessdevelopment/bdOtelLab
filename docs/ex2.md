@@ -49,7 +49,7 @@ F5 BIG-IP Telemetry Streaming (BIG-IP TS) enables you to declaratively aggregate
 
 #### Associate logging profiles with BIG-IP virutual server
 
-Wth the TS declaration posted, the BIG-IP will start to push basic system info metrics to the OTel collector.  Additionally, you well enable AVR and LTM request logging system info is configured.  To do so, you will associate the relevant AS3 logging profiles with the application's virtual server configuration.  
+Wth the TS declaration posted, the BIG-IP will start to push basic system info metrics to the OTel collector.  Additionally, you will enable AVR and LTM request logging system info is configured.  To do so, you will associate the relevant AS3 logging profiles with the application's virtual server configuration.  
 
 From the BIG-IP UI, select and open the '*theLabApp_vs*'.  Scroll down and switch the configuration option to *Advanced*, (see below).
 
