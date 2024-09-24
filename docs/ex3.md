@@ -38,7 +38,7 @@ You will need to convert and provide the collector's cert/key and root certifica
 
 <img src="../images/Picture30.png">
 
-Us the VSCode terminal window run the following commands and paste the outputs in the appropriate log consumer fields.
+Use the VSCode terminal window run the following commands and paste the outputs in the appropriate log consumer fields.
 
 ```awk 'NF {sub(/\r/, ""); printf "%s\n",$0;}' /home/xuser/otel-lab/config/collector-key.pem```
 
