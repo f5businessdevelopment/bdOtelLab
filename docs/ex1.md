@@ -38,7 +38,7 @@ Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see belo
 
 With VS Code open, use the navigation pane on the left and open the application file, (theLabApp/labapp.py).  When ran, the application will:
 
-1. Create a local web site located at http://10.1.10.6:8080
+1. Create a local web site located at http://10.1.10.4:8080
 1. Connect to and populate a Redis database container with several key/value pairs
 1. Randomly select and retrieve a URL record from the Redis DB
 1. Redirect the site visitor to the selected URL
