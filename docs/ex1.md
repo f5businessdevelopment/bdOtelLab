@@ -95,7 +95,7 @@ The application will start and the exposed endpoint will be presented as shown b
 
 <img src= "../images/Picture11.png" width="650">
 
-To test the application, you can select and open the link provided in the terminal window as illustrated above or you can navigate to Google Chrome located on the desktop.  With Chrome opened, open a new tab and navigate to the application's published endpoint -  http://10.1.10.4.
+To test the application, you can select and open the link provided in the terminal window as illustrated above or you can navigate to Google Chrome located on the desktop.  With Chrome opened, open a new tab and navigate to the application's endpoint, (published via NGINX Plus) -  http://10.1.10.4.
 
 <img src="../images/Picture12.png">
 
