@@ -38,7 +38,7 @@ Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see belo
 
 With VS Code open, use the navigation pane on the left and open the application file, (theLabApp/labapp.py).  When ran, the application will:
 
-1. Create a local web site located at http://10.1.10.4:8080
+1. Create a local web site located at http://10.1.10.4
 1. Connect to and populate a Redis database container with several key/value pairs
 1. Randomly select and retrieve a URL record from the Redis DB
 1. Redirect the site visitor to the selected URL
@@ -95,7 +95,7 @@ The application will start and the exposed endpoint will be presented as shown b
 
 <img src= "../images/Picture11.png" width="650">
 
-To test the application, you can select and open the link provided in the terminal window as illustrated above or you can navigate to Google Chrome located on the desktop.  With Chrome opened, open a new tab and navigate to the application's published endpoint -  http://10.1.20.4:8080.
+To test the application, you can select and open the link provided in the terminal window as illustrated above or you can navigate to Google Chrome located on the desktop.  With Chrome opened, open a new tab and navigate to the application's published endpoint -  http://10.1.10.4.
 
 <img src="../images/Picture12.png">
 
@@ -113,7 +113,7 @@ You will likely note multiple errors.  To begin with, address the errors associa
 
 <img src="../images/Picture13.png">
 
-Update the application file in VS Code to correct the issue and save your changes.  Upon saving, the application will automatically restart.  Test your application changes by navigating to the application endpoint at http://10.1.20.4:8080.  
+Update the application file in VS Code to correct the issue and save your changes.  Upon saving, the application will automatically restart.  Test your application changes by navigating to the application endpoint at http://10.1.10.4.  
 
 Once you have tried the application, (*yes, it will still fail*), return to the Jaeger UI and search for the latest traces by selecting *'**Find Traces**'*. If you have successfully corrected the issue you should see a similar output to the below example.  While there are still errors reporting, you should see a successful **Redis Connectivity** trace entry.
 
@@ -129,7 +129,7 @@ Review the trace/span entries to identify possible causes of the application iss
 
 <img src="../images/Picture16.png">
 
-As with the previous issue, update the application file in VS Code to correct the issue and save your changes.  Upon saving, the application will automatically restart.  Test your application changes by navigating to the application endpoint at http://10.1.20.4:8080.
+As with the previous issue, update the application file in VS Code to correct the issue and save your changes.  Upon saving, the application will automatically restart.  Test your application changes by navigating to the application endpoint at http://10.1.10.4.
 
 If your corrections are successful, the browser session should be redirected to a random news site.  To verify all issues have been addressed, review the latest trace information in Jaeger.  If all issues have been remediated, you should see results similar to the below example.
 

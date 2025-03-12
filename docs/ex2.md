@@ -5,7 +5,7 @@ Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry
 
 #### Review and update NGINX configuration file
 
-The lab environment includes an NGINX Plus instance that has been configured to publish and provide load balancing to our previously deployed application, (thelabApp).  
+The lab environment includes an NGINX Plus instance that has been configured to publish and provide load balancing to our previously deployed application, (thelabApp).  The application can be reached at *http://10.1.10.4*.  
 
 NGINX uses a configuration file (nginx.conf) to define its behavior, including server blocks, reverse proxy settings, load balancing, security rules, loggin, and performance optimizations.  During this exercise, you will modify the *nginx.conf* file to enable the sending of trace information, (*spans*) to Jaeger. 
 
@@ -13,11 +13,11 @@ From the VS Code UI use the navigation pane on the left and open the NGINX Plus 
 
 <img src= "../images/Picture39.png">
 
-Several lines related to OTEL integration have been "remmed out".  Let's review the lines and remove the leading '#' to enable to line item.
+Several lines related to OTel integration have been "remmed out".  Let's review the lines and remove the leading '#' to enable to line item.
 
-- Line 2 - The [NGINX Open Telemetry module](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/opentelemetry/) has been installed on the lab NGINX instance.  The module provides OTEL distributed tracing support and must also be loaded via the NGINX configuration.  Remove the leading '#' to enable loading of the module.
+- Line 2 - The [NGINX Open Telemetry module](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/opentelemetry/) has been installed on the lab NGINX instance.  The module provides OTel distributed tracing support and must also be loaded via the NGINX configuration.  Remove the leading '#' to enable loading of the module.
 
-- Line 10 - 
+- Line 10 - The 
 
 - Lines 11 thru 13 - 
 
@@ -27,7 +27,7 @@ Several lines related to OTEL integration have been "remmed out".  Let's review 
 
 With the above noted file lines updated, save the file and use the following command to verify and reload the NGINX configuration:
 
-```sudo nginx -t && sudo nginx -s reload```. 
+```sudo nginx -t && sudo nginx -s reload```
 
 
 ### Configure NGINX Metrics
