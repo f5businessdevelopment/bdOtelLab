@@ -15,15 +15,15 @@ From the VS Code UI use the navigation pane on the left and open the NGINX Plus 
 
 Several lines related to OTEL integration have been "remmed out".  Let's review the lines and remove the leading '#' to enable to line item.
 
-Line 2 - The [NGINX Open Telemetry module](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/opentelemetry/) has been installed on the lab NGINX instance.  The module provides OTEL distributed tracing support and must also be loaded via the NGINX configuration.  Remove the leading '#' to enable loading of the module.
+- Line 2 - The [NGINX Open Telemetry module](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/opentelemetry/) has been installed on the lab NGINX instance.  The module provides OTEL distributed tracing support and must also be loaded via the NGINX configuration.  Remove the leading '#' to enable loading of the module.
 
-Line 10 - 
+- Line 10 - 
 
-Lines 11 thru 13 - 
+- Lines 11 thru 13 - 
 
-Line 22 - 
+- Line 22 - 
 
-Lines 25 thru 27 - 
+- Lines 25 thru 27 - 
 
 To implement the changes, use the following command to verify and reload the NGINX configuration - ```sudo nginx -t && sudo nginx -s reload```
 
