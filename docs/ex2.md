@@ -25,7 +25,9 @@ Several lines related to OTEL integration have been "remmed out".  Let's review 
 
 - Lines 25 thru 27 - 
 
-With the above noted file lines updated, save the file and use the following command to verify and reload the NGINX configuration - ```sudo nginx -t && sudo nginx -s reload```. 
+With the above noted file lines updated, save the file and use the following command to verify and reload the NGINX configuration:
+
+```sudo nginx -t && sudo nginx -s reload```. 
 
 
 ### Configure NGINX Metrics
