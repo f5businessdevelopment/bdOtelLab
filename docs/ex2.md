@@ -5,7 +5,7 @@ During this exercise, you will be
 
 
 
-#### Review NGINX configuration file
+#### Review and update NGINX configuration file
 
 From the VS Code UI use the navigation pane on the left and open the NGINX Plus configuration file, (*nginx.conf*).  Familiarize yourself with the configuration file contents.  
 
