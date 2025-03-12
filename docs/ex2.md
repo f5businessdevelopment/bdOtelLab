@@ -9,6 +9,8 @@ During this exercise, you will be
 
 From the VS Code UI use the navigation pane on the left and open the NGINX Plus configuration file, (*nginx.conf*).  Familiarize yourself with the configuration file contents.  
 
+<img src= "../images/Picture39.png">
+
 #### Review OTel Collector configuration
 
 The OpenTelemetry Collector service provides a vendor-agnostic proxy to receive, process and export observability data.  The collector supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends.
