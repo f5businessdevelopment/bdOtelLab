@@ -15,11 +15,10 @@ The OTel collector is managed via a user-readable YAML configuration file.  At a
 
 #### Review OTel Collector configuration
 
-From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).  Familiarize yourself with the configuration file contents.  The collector configuration file, (*example below*)  has been configured to:
+From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).  Familiarize yourself with the configuration file contents.  For this specific exercise, the collector configuration file, (*example below*)  has been configured to:
  - Receive telemetry via OTLP over either HTTP or gRPC
  - Process records using the standard batch processor
  - Export metrics to a Prometheus backend
- - Export logs to a Splunk Enterprise instance *-for Exercise 3*
 
 <img src= "../images/Picture18.png">
 
