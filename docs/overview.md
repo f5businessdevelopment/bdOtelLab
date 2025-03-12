@@ -12,7 +12,7 @@ This self-guided lab is intended to provide a hands-on introduction to Open Tele
 As illustrated above, the lab environment consists of the following:
    >**F5 BIG-IP(s)** providing L4/L7 ADC Services and utilizing **F5 Telemetry Streaming** (TS) to stream telemetry data to an OTel collector gateway
 
-   >**F5 BIG-IP Next** providing L4/L7 ADC Services and utilizing Open Telemetry to stream telemetry data to an OTel collector gateway
+   >**NGINX Plus** providing L4/L7 ADC Services and utilizing Open Telemetry to stream telemetry data to an OTel collector gateway
 
    >**Sample Application** consisting of a simple python frontend application and a Redis backend database
 
