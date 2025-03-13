@@ -3,7 +3,7 @@ Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry
 
 With our application now functioning correctly and delivering trace data to Jaeger, we'll now expand our observability to include our front-end load balancer, (NGINX Plus).  
 
-### Configure NGINX tracing - review and update the NGINX configuration file
+### Configure NGINX tracing 
 
 The lab environment includes an NGINX Plus instance that has been configured to publish and provide load balancing to our previously deployed application, (thelabApp).  The application can be reached at *http://10.1.10.4*.  
 
@@ -49,7 +49,7 @@ Review the various spans paying special attention to the NGINX span '*LB Fronten
 
 <img src= "../images/Picture46.png">
 
-### Configure NGINX metrics - review OTel Collector configuration and update the NGINX configuration file
+### Configure NGINX metrics
 
 The OpenTelemetry Collector service provides a vendor-agnostic proxy to receive, process and export observability data.  The collector supports open-source observability data formats (e.g. Jaeger, Prometheus, Fluent Bit, etc.) sending to one or more open-source or commercial back-ends.
 
