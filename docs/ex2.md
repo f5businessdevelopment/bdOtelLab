@@ -41,7 +41,7 @@ With the above noted file lines updated, save the file and use the following com
 ```sudo nginx -t && sudo nginx -s reload```
 
 #### Verify NGINX tracing
-Once you have reloaded NGINX refresh the application (http://10.1.10.4) a few times then return to the Jaeger UI, refresh the page.  From the Jaeger UI select the '*NGINX*' service and search for the latest traces by selecting *'**Find Traces**'*, (see below).
+Once you have reloaded NGINX, refresh the application (http://10.1.10.4) a few times then return to the Jaeger UI, refresh the page.  From the Jaeger UI select the '*NGINX*' service and search for the latest traces by selecting *'**Find Traces**'*, (see below).
 
 <img src= "../images/Picture45.png">
 
@@ -80,7 +80,7 @@ With the above noted file lines updated, save the file and use the following com
 ```sudo nginx -t && sudo nginx -s reload```
 
 #### Verify NGINX Metrics
-Once you have reloaded NGINX refresh the application (http://10.1.10.4) a few times to generate new traffic.  The NGINX OTel receiver is configured to pull metrics from the NGINX status page every 5 seconds.  Once pulled by th OTel collector, the metrics are processed and delivered to Prometheus for visualization.
+Once you have reloaded NGINX, refresh the application (http://10.1.10.4) a few times to generate new traffic.  The NGINX OTel receiver is configured to pull metrics from the NGINX status page every 5 seconds.  Once pulled by th OTel collector, the metrics are processed and delivered to Prometheus for visualization.
 
 If not currently opened, open Google Chrome from the desktop and select the Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.20.4:9090.
 
