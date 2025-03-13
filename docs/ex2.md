@@ -7,7 +7,7 @@ With our application now functioning correctly and delivering trace data to Jaeg
 
 The lab environment includes an NGINX Plus instance that has been configured to publish and provide load balancing to our previously deployed application, (thelabApp).  The application can be reached at *http://10.1.10.4*.  
 
-NGINX uses a configuration file (nginx.conf) to define its behavior, including server blocks, reverse proxy settings, load balancing, security rules, loggin, and performance optimizations.  During this exercise, you will modify the *nginx.conf* file to enable the sending of trace information, (*spans*) to Jaeger. 
+NGINX uses a configuration file (nginx.conf) to define its behavior, including server blocks, reverse proxy settings, load balancing, security rules, logging, and performance optimizations.  During this exercise, you will modify the *nginx.conf* file to enable the sending of trace information, (*spans*) to Jaeger. 
 
 From the VS Code UI use the navigation pane on the left and open the NGINX Plus configuration file, (*nginx.conf*).  Familiarize yourself with the configuration file contents, (see below).  
 
@@ -17,17 +17,31 @@ Several lines related to OTel integration have been "remmed out".  Let's review 
 
 - Line 2 - The [NGINX Open Telemetry module](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/opentelemetry/) has been installed on the lab NGINX instance.  The module provides OTel distributed tracing support and must also be loaded via the NGINX configuration.  Remove the leading '#' to enable loading of the module.
 
-- Line 10 - The 
+   <img src= "../images/Picture40.png">
 
-- Lines 11 thru 13 - 
+- Line 10 - The '*otel_service_name*' directive sets the trace stream's service name.  All spans generated will be categorized and grouped under this service name, (see below). Remove the leading '#' to set the service name.
 
-- Line 22 - 
+    <img src= "../images/Picture41.png">
 
-- Lines 25 thru 27 - 
+- Lines 11 thru 13 - The '*otel_exporter*' directive block is used to specify the address of the destination service. For this lab, we have specified the locally hosted Jaeger endpoint. Remove the leading '#' to set the export destination.
+
+   <img src= "../images/Picture42.png">
+- Line 22 - The '*otel_trace*' directive flag determines whether tracing is enabled. Remove the leading '#' to enable tracing.  
+
+   <img src= "../images/Picture43.png">
+
+- Line 25 - The '*otel_span_name*' directive sets the event span name. Remove the leading '#' to set the span name.
+- Line 26 - In additionn to the default attributes provided, the '*otel_span_attr*' directive can be used to assign custom attributes, (key/value). Remove the leading '#' to create a custom span attribute. 
+- Line 27 - The '*otel_trace_context*' directive determines how the trace context relates to other traces. Remove the leading '#' to set trace context.
+
+   <img src= "../images/Picture44.png">
 
 With the above noted file lines updated, save the file and use the following command to verify and reload the NGINX configuration:
 
 ```sudo nginx -t && sudo nginx -s reload```
+
+#### Verify NGINX tracing
+Once you have reloaded NGINX return to the Jaeger UI and search for the latest traces by selecting *'**Find Traces**'*.
 
 
 ### Configure NGINX metrics - review OTel Collector configuration and update the NGINX configuration file
