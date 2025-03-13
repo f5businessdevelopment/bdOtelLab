@@ -62,7 +62,7 @@ The OTel collector is managed via a user-readable YAML configuration file.  At a
 
 From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).  
 
-The collector provides an integration with NGINX to ingest metrics.  The Collector fetches status metrics from the configured path in the NGINX receiver. From there the metrics are processed and exported to the specified exporter.  Familiarize yourself with the configuration file contents.  Specific to this exercise, the collector configuration file, (*example below*)  has been configured to:
+The collector provides an integration with NGINX to ingest metrics.  The Collector fetches status metrics from the configured path in the NGINX receiver, (see below). From there the metrics are processed and exported to the specified exporter.  Familiarize yourself with the configuration file contents.  Specific to this exercise, the collector configuration file, (*example below*)  has been configured to:
  - Pull telemetry from a published NGINX status page
  - Process records using the standard batch processor
  - Export metrics to a Prometheus backend
