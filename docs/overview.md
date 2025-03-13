@@ -24,7 +24,7 @@ As illustrated above, the lab environment consists of the following:
 ---
 **Go to [Exercise 1 - App instrumentation walk-through and troubleshooting](ex1.md)**
 
-**Go to [Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry](docs/ex2.md)**
+**Go to [Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry](ex2.md)**
 
 **Go to [Exercise 3 - Exporting BIG-IP metrics using the OTel consumer](ex3.md)**
 
