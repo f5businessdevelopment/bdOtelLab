@@ -57,9 +57,10 @@ From the BIG-IP UI, select and open the '*theLabApp_vs*'.  Scroll down and switc
 With the advanced configuration visible, scroll down and select the appropriate **HTTP Analytics**, **TCP Analytics**, and **Request Logging** profiles, (see below).  Select '*Update*' to save the configuration changes.
 
 <img src="../images/Picture38.png">
+
 #### Verify data delivery
 
-The BIG-IP is now configured to send telemetry.  If not currently opened, open Google Chrome from the desktop and select the  Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.20.4:9090.
+The BIG-IP is now configured to send telemetry.  If not currently opened, open Google Chrome from the desktop and select the Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.20.4:9090.
 
 <img src="../images/Picture24.png">
 
@@ -75,11 +76,10 @@ You can use the metrics explorer to view the available BIG-IP metrics (*see belo
 
 <img src="../images/Picture22.png">
 
-This concludes Exercise 2.
+This concludes Exercise 3.
 
 ---
 
-**Go to [Exercise 3 - Exporting BIG-IP Next metrics using the OTel consumer](ex3.md)**
 
 **Go to [Overview](overview.md)**
 

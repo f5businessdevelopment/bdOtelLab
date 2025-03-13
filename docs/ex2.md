@@ -60,16 +60,45 @@ The OTel collector is managed via a user-readable YAML configuration file.  At a
 
 - **Exporters** - section including information related push or pull based backends/destinations
 
-From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).  Familiarize yourself with the configuration file contents.  Specific to this exercise, the collector configuration file, (*example below*)  has been configured to:
- - Receive telemetry from a published NGINX status page
+From the VS Code UI use the navigation pane on the left and open the OTel collector gateway configuration file, (*collector-gateway.yml*).  
+
+The collector provides an integration with NGINX to ingest metrics.  The Collector fetches status metrics from the configured path in the NGINX receiver. From there the metrics are processed and exported to the specified exporter.  Familiarize yourself with the configuration file contents.  Specific to this exercise, the collector configuration file, (*example below*)  has been configured to:
+ - Pull telemetry from a published NGINX status page
  - Process records using the standard batch processor
  - Export metrics to a Prometheus backend
 
 <img src= "../images/Picture18.png">
 
+Before you can pull metrics from NGINX, you must first expose the NGINX status page via the NGINX configuration file.  From the VS Code UI use the navigation pane on the left and open the NGINX Plus configuration file, (*nginx.conf*).
 
+To expose the NGINX status page, navigate down to an remove the leading '*#*' from lines 35 - 37, (see below).
 
+<img src= "../images/Picture47.png">
 
+With the above noted file lines updated, save the file and use the following command to verify and reload the NGINX configuration:
+
+```sudo nginx -t && sudo nginx -s reload```
+
+#### Verify NGINX Metrics
+Once you have reloaded NGINX refresh the application (http://10.1.10.4) a few times to generate new traffic.  The NGINX OTel receiver is configured to pull metrics from the NGINX status page every 5 seconds.  Once pulled by th OTel collector, the metrics are processed and delivered to Prometheus for visualization.
+
+If not currently opened, open Google Chrome from the desktop and select the Prometheus tab.  If the tab is no longer visible, the Prometheus UI is located at http://10.1.20.4:9090.
+
+<img src="../images/Picture24.png">
+
+To perform a quick test on the system, select the *Graph* tab and enter '**f5_nginx_requests_total**' in the search bar; click on 'Execute'.  
+
+The system will query metrics for the NGINX requests total metric and return a relevant time chart, (*see below*).
+
+<img src="../images/Picture48.png">
+
+You can now use the metrics explorer to view the available NGINX metrics (*see below*).
+
+<img src="../images/Picture49.png">
+
+This concludes Exercise 2.
+
+---
 
 **Go to [Exercise 3 - Exporting BIG-IP metrics using the OTel consumer](ex3.md)**
 
