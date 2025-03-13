@@ -41,8 +41,11 @@ With the above noted file lines updated, save the file and use the following com
 ```sudo nginx -t && sudo nginx -s reload```
 
 #### Verify NGINX tracing
-Once you have reloaded NGINX return to the Jaeger UI and search for the latest traces by selecting *'**Find Traces**'*.
+Once you have reloaded NGINX refresh the application (http://10.1.10.4) a few times then return to the Jaeger UI, refresh the page.  From the Jaeger UI select the '*NGINX*' service and search for the latest traces by selecting *'**Find Traces**'*, (see below).
 
+<img src= "../images/Picture45.png">
+
+Review the various spans paying special attention to the NGINX span '*LB Frontend call*' tags.  In addition to the default tags provided, you should be able to find the custom span attribute configured via the NGINX configuration file.
 
 ### Configure NGINX metrics - review OTel Collector configuration and update the NGINX configuration file
 
