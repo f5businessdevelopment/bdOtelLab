@@ -45,7 +45,9 @@ Once you have reloaded NGINX refresh the application (http://10.1.10.4) a few ti
 
 <img src= "../images/Picture45.png">
 
-Review the various spans paying special attention to the NGINX span '*LB Frontend call*' tags.  In addition to the default tags provided, you should be able to find the custom span attribute configured via the NGINX configuration file.
+Review the various spans paying special attention to the NGINX span '*LB Frontend call*' tags.  In addition to the default tags provided, you should be able to find the custom span attribute configured via the NGINX configuration file, (see below).
+
+<img src= "../images/Picture46.png">
 
 ### Configure NGINX metrics - review OTel Collector configuration and update the NGINX configuration file
 
