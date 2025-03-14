@@ -139,7 +139,7 @@ This concludes Exercise 1.  **Be sure to leave your application running for use 
 
 ---
 
-**Go to [Exercise 2 - Exporting BIG-IP metrics using the OTel consumer](ex2.md)**
+**Go to [Exercise 2 - Exporting NGINX Plus spans and metrics using Open Telemetry](ex2.md)**
 
 **Go to [Overview](overview.md)**
 
