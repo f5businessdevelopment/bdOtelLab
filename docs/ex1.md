@@ -3,7 +3,7 @@ Exercise 1 - App instrumentation walk-through and troubleshooting
 ============================================================================
 ### Deploy blueprint and connect to jumpbox
 
-From the [UDF](https://udf.f5.com/blueprints) console, search for and deploy the blueprint entitled *OpenTelemetry Introductory*. 
+From the [UDF](https://udf.f5.com/blueprints) console, search for and deploy the blueprint entitled *AW26-Talking telemetry and observability with F5*. 
 Once the blueprint has finished deploying, access the Windows jump box by selecting the RDP access link, (*see below*).  The jump box will be used to complete all lab exercises.  Credentials for this lab can be viewed by accessing the system(s) **DETAILS** tab.
 
 <img src="../images/Picture1.png" width="750">
