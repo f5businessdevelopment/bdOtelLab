@@ -1,4 +1,4 @@
-F5 BD OTel Introductory Lab
+AW26-Talking telemetry and observability with F5
 ============================================================================
 
 <img src="images/labenviron.png" alt="Where's my Image!">
