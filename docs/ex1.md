@@ -4,7 +4,7 @@ Exercise 1 - App instrumentation walk-through and troubleshooting
 ### Deploy blueprint and connect to jumpbox
 
 From the [UDF](https://udf.f5.com/blueprints) console, search for and deploy the blueprint entitled *AW26-Talking telemetry and observability with F5*. 
-Once the blueprint has finished deploying, access the Windows jump box by selecting the RDP access link, (*see below*).  The jump box will be used to complete all lab exercises.  Credentials for this lab can be viewed by accessing the system(s) **DOCUMENTATION** tab.
+Once the blueprint has finished deploying, access the Windows jump box by selecting the RDP access link, (*see below*).  The jump box will be used to complete all lab exercises.  Credentials for this lab can be viewed by accessing the system(s) **DETAILS** tab.
 
 <img src="../images/Picture1.png" width="750">
 
@@ -31,7 +31,7 @@ This relationship could indicate that, for example, span A makes a service call 
 
 ***Note:** Although a basic understanding of Python may be helpful, this lab assumes no previous coding experience*.
 
-Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see below).  You will be using VS Code to review and edit the application file.  VS Code will be prompt you for user credentials as it creates a remote session with the application server, (theWorks). Credentials are available in the *theWorks* **DETAILS** tab.           
+Navigate to and open Visual Studio (VS) Code from the Windows desktop, (see below).  You will be using VS Code to review and edit the application file.  VS Code will be prompt you for user credentials as it creates a remote session with the application server, (theWorks). Credentials are available in the *theWorks* **DOCUMENTATION** tab.           
 (*Tip: If the login fails, wait 30 seconds and try again.*)
 
 <img src="../images/Picture3.png" width="600">
